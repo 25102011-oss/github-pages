@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias Nicolás Romero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>📰 Noticias de Nicolás Romero</h1>
+        <p>Robos, choques y sucesos recientes</p>
+    </header>
+
+    <nav>
+        <button onclick="filtrarNoticias('todas')">Todas</button>
+        <button onclick="filtrarNoticias('robo')">Robos</button>
+        <button onclick="filtrarNoticias('choque')">Choques</button>
+        <button onclick="filtrarNoticias('otros')">Otros</button>
+    </nav>
+<section class="admin-panel">
+    <h2>Panel de Administración</h2>
+    <input type="text" id="titulo" placeholder="Título de la noticia">
+    <textarea id="descripcion" placeholder="Descripción"></textarea>
+    
+    <select id="tipo">
+        <option value="robo">Robo</option>
+        <option value="choque">Choque</option>
+        <option value="otros">Otro</option>
+    </select>
+
+    <input type="text" id="imagen" placeholder="Ruta de la imagen (ej: imagenes/robo2.jpg)">
+    
+    <button onclick="agregarNoticia()">Publicar Noticia</button>
+</section>
+
+    <main id="contenedor-noticias">
+        <!-- Las noticias se cargan aquí -->
+    </main>
+
+    <footer>
+        <p>Noticias locales | Nicolás Romero</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
